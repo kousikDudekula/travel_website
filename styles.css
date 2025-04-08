@@ -1,0 +1,202 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Places Grid */
+.places {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.place {
+    width: 300px;
+    margin: 15px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.place:hover {
+    transform: scale(1.05);
+}
+
+.place img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+/* Destination Page */
+.destination-page {
+    background: url('../images/travel-bg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.content {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ff4b2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #ff416c;
+}
+.explore-btn {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 15px; 
+    padding: 10px 20px;
+    background: #ff4b2b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.explore-btn:hover {
+    background: #ff416c;
+}
+
+/* Search Box */
+#searchBox {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Search Box Animation */
+#searchBox:focus {
+    transform: scale(1.05);
+    border-color: #ff4f70;
+    outline: none;
+}
+/* Main Page Header */
+.main-header {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b); /* Pink-Orange */
+}
+
+.place-header {
+    background: linear-gradient(135deg, #654ea3, #eaafc8); /* Purple to Pink */
+}
+
+
+
+/* ========== New Animation Styles ========== */
+
+/* Card Enter Animation */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Glow on hover */
+.place:hover {
+    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.4), 0 0 20px #ff4b2b;
+}
+
+/* Image zoom effect */
+.place img {
+    transition: transform 0.5s ease;
+}
+.place:hover img {
+    transform: scale(1.1);
+}
+
+/* Stagger effect */
+.place {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+/* Animate on scroll using JavaScript */
+.place:nth-child(1) { animation-delay: 0.1s; }
+.place:nth-child(2) { animation-delay: 0.2s; }
+.place:nth-child(3) { animation-delay: 0.3s; }
+.place:nth-child(4) { animation-delay: 0.4s; }
+.place:nth-child(5) { animation-delay: 0.5s; }
+.place:nth-child(6) { animation-delay: 0.6s; }
+.place:nth-child(7) { animation-delay: 0.7s; }
+.place:nth-child(8) { animation-delay: 0.8s; }
+.place:nth-child(9) { animation-delay: 0.9s; }
+.place:nth-child(10) { animation-delay: 1s; }
+
+/* Bounce header */
+@keyframes bounceIn {
+    0% { transform: scale(0.9); opacity: 0; }
+    60% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); }
+}
+header h1 {
+    animation: bounceIn 1s ease;
+}
+
+/* Footer pulse */
+footer {
+    background-color: #ff4b2b;
+    color: white;
+    padding: 10px 0;
+    animation: pulse 5s infinite;
+}
+@keyframes pulse {
+    0% { background-color: #ff4b2b; }
+    50% { background-color: #ff416c; }
+    100% { background-color: #ff4b2b; }
+}
+
+/* Search Box Styling */
+#searchBox {
+    width: 50%;
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #ff4f70;
+    margin-top: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
